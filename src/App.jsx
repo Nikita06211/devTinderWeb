@@ -16,8 +16,6 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      <NavBar/>
-      <h1 className='text-3xl font-bold'>Hello World</h1>
     </>
   )
 }
