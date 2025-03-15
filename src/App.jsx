@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Body from './Body';
-import Profile from './Profile';
-import Login from './Login';
+import Body from './components/Body';
+import Profile from './components/Profile';
+import Login from './components/Login';
 import { Provider } from 'react-redux';
 import appStore from './utils/appStore'; 
 
@@ -14,6 +14,7 @@ function App() {
         <BrowserRouter basename='/'>
           <Routes>
             <Route path='/' element = {<Body/>}>
+              <Route path='/' element = {<div>feed</div>}/>
               <Route path='/login' element = {<Login/>}/>
               <Route path='/profile' element = {<Profile/>}/>
             </Route>
