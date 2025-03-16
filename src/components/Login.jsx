@@ -14,13 +14,13 @@ const Login = () => {
 
     const handleLogin = async() => {
         try{
-          const res = await axios.post(BASE_URL+"/login",{
+          const user = await axios.post(BASE_URL+"/login",{
             emailId,
             password
           },
           { withCredentials: true }
         );
-        dispatch(addUser(res.data));
+        dispatch(addUser(user.data));
         return navigate("/");
         }catch(err){
           console.error(err);
