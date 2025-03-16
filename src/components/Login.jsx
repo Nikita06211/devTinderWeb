@@ -9,6 +9,7 @@ const Login = () => {
 
     const [emailId, setEmailId] = useState("gray@gmail.com");
     const [password, setPassword] = useState("Gray@123");
+    const [error, setError] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ const Login = () => {
         dispatch(addUser(user.data));
         return navigate("/");
         }catch(err){
+          setError(err?.response?.data|| "Something went wrong");
           console.error(err);
         }
     }
@@ -41,6 +43,7 @@ const Login = () => {
                     <legend className="fieldset-legend">Password</legend>
                     <input type="text" className="input" placeholder="Type here" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                 </fieldset>
+                <p className='text-red-600 text-s my-2'>{error}</p>
             </div>
             <div className="card-actions justify-center">
             <button className="btn btn-primary" onClick={handleLogin}>Login</button>
