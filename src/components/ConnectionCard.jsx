@@ -5,7 +5,7 @@ const ConnectionCard = ({ connection }) => {
 
   return (
     <div className="flex justify-center"> {/* Centers the card */}
-      <div className="card card-side bg-base-200 shadow-sm my-8 w-2/3 mx-auto">
+      <div className="card card-side bg-base-200 shadow-sm my-8 h-1/2 w-2/3 mx-auto">
         <figure>
           <img className="w-40 h-full" src={photoUrl} alt="photo" />
         </figure>

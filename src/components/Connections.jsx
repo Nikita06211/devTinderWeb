@@ -34,7 +34,7 @@ const Connections = () => {
       {connections.map((connection)=> {
         // const {firstName, lastName, photoUrl, age, gender, about} = connection;
         return (
-        <div>
+        <div key = {connection._id}>
             <ConnectionCard connection = {connection} className="my-10 mx-5"/>
         </div>
       )})}
