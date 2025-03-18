@@ -80,10 +80,10 @@ const Login = () => {
             <div className="card-actions justify-center">
             <div className="relative w-26 h-12 flex items-center bg-gray-300 rounded-4xl  cursor-pointer" onClick={() => setIsLoginForm(!isLoginForm)}>
               <div className={`absolute h-12 bg-primary rounded-4xl shadow-md transition-transform  ${isLoginForm ? "translate-x-0 w-16 " : "translate-x-14 w-20 "}`}></div>
-                <span className={`absolute text-white left-2 text-sm font-semibold`} onClick={()=>handleLogin()}>
+                <span className={`absolute text-white left-2 text-sm font-semibold`} onClick={emailId && password ? ()=>handleLogin(): undefined}>
                   {isLoginForm ? "Login" : ""}
                 </span>
-                <span className="absolute -right-4 text-white text-sm font-semibold" onClick={emailId && password ? () => handleSignUp() : undefined}>
+                <span className="absolute -right-4 text-white text-sm font-semibold" onClick={ () => handleSignUp() }>
                   {!isLoginForm ? "Sign Up" : ""}
                 </span>
               </div>            
