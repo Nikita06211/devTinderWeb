@@ -1,1 +1,1 @@
-export const BASE_URL = "https://dev-tinder-eight.vercel.app/api"
+export const BASE_URL = "https://dev-tinder-kappa.vercel.app"
