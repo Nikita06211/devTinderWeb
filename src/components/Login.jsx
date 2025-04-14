@@ -86,8 +86,15 @@ const Login = () => {
                 <span className="absolute -right-4 text-white text-sm font-semibold" onClick={ () => handleSignUp() }>
                   {!isLoginForm ? "Sign Up" : ""}
                 </span>
-              </div>            
+              </div>   
+              
             </div>
+            <p 
+                className="text-sm text-blue-600 underline cursor-pointer justify-center text-center" 
+                onClick={() => setIsLoginForm(!isLoginForm)}
+              >
+                {isLoginForm ? "Don't have an account? Sign Up" : "Already have an account? Login"}
+              </p> 
         </div>
        </div>
     </div>
